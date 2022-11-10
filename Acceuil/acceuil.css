@@ -1,0 +1,220 @@
+/* Rectangle Header */
+
+div.rectangle-header{
+	position: fixed;
+	width: 100%;
+	height: 124px;
+	left: 0px;
+	top: 0px;
+	background: #A7CAE7;
+	z-index: -1;
+
+}
+
+
+
+/* Logo */
+
+img.logo{
+	position: fixed;
+	width: 170px;
+	height: 124px;
+	left: 0px;
+	top: 0px;
+	background: url(infinite_measures.jpg);
+}
+
+
+
+/* L'esprit BloomTech c'est quoi ? */
+
+
+div#contenu h1{
+	position: relative;
+	width: 405px;
+	height: 42px;
+	left: 517px;
+	top: 124px;
+	font-family: 'Titillium Web';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 46px;
+	color: #000000;
+	z-index: -2;
+} 
+
+/* Rectangle Présentaion */
+
+
+div#contenu p.presentation{
+	position: absolute;
+	width: 679px;
+	height: 414px;
+	left: 381px;
+	top: 175px;
+	background: #A7CAE7;
+	z-index: -1;
+}
+
+
+
+/* Ligne */
+
+div#contenu hr{
+	position: absolute;
+	width: 455px;
+	left: 493px;
+	height: 4px;
+	top: 600px;
+	color: #000000;
+	background: black;
+	transform: rotate(0deg);
+	z-index: -2;
+}
+
+
+
+/* Liste de produits : */
+
+div#contenu h2{
+	position: absolute;
+	width: 288px;
+	height: 30px;
+	left: 44px;
+	top: 599px;
+	font-family: 'Titillium Web';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 38px;
+	color: #000000;
+}
+
+
+
+/* Rectangle 1 */
+
+div#contenu div.Rectangle1{
+	position: absolute;
+	width: 222px;
+	height: 310px;
+	left: 65px;
+	top: 665px;
+	background: #A7CAE7;
+}
+
+
+
+
+
+
+/* Rectangle 2 */
+
+div#contenu div.Rectangle2{
+	position: absolute;
+	width: 222px;
+	height: 310px;
+	left: 337px;
+	top: 665px;
+	background: #A7CAE7;
+}
+
+
+
+
+/* Rectangle 3 */
+
+div#contenu div.Rectangle3{
+	position: absolute;
+	width: 222px;
+	height: 310px;
+	left: 609px;
+	top: 665px;
+	background: #A7CAE7;
+}
+
+
+
+
+
+/* Rectangle 4 */
+
+div#contenu div.Rectangle4{
+	position: absolute;
+	width: 222px;
+	height: 310px;
+	left: 881px;
+	top: 665px;
+	background: #A7CAE7;
+}
+
+
+
+
+
+/* Rectangle 5 */
+
+div#contenu div.Rectangle5{
+	position: absolute;
+	width: 222px;
+	height: 310px;
+	left: 1153px;
+	top: 665px;
+	background: #A7CAE7;
+}
+
+
+nav{
+	height: 100vh;
+	width: 55vw;
+	min-width: 600px;
+	display: flex;
+	align-items: top;
+	justify-content: space-around;
+	top: 50px;
+	position: fixed;
+	padding-left: 160px;
+}
+
+nav:hover{
+	color: white;
+}
+
+/*a{
+	position: relative;
+	background-color: yellow;
+	text-decoration: none;
+	font-family: 'Poppins',sans-serif;
+	color: white;
+	font-size: 18px ;
+	letter-spacing: 0,5px;
+	padding: 0 10px;
+}
+
+a:after{
+	content: "";
+	position: absolute;
+	background-color: red;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0,3s;
+}
+
+*/
+
+a:hover{
+	color: green;
+}
+
+
+
+footer{
+	padding-top: 940px;
+}
+
+
+
+
