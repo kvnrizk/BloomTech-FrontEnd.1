@@ -88,6 +88,42 @@ body
 	animation-delay: -3s;
 }
 
+.boxfrgt
+{
+	position: relative;
+	width: 380px;
+	height: 480px;
+	background: #1c1c1c;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.boxfrgt::before 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 480px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
+	animation: animate 6s linear infinite;
+}
+.boxfrgt::after 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 480px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
 
 
 @keyframes animate 
