@@ -262,3 +262,9 @@ input[type="submit"]:active
 	text-align: justify;
 	letter-spacing: 0.1em;
 }
+
+@media screen and (max-width: 480px) {
+	.box , .boxIn , .boxfrgt {
+		transform:scale(0.7);
+	}
+}
