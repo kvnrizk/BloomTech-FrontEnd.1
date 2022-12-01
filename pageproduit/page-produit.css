@@ -6,19 +6,20 @@ body{
     min-height: 100vh;
     position: relative;
 
+
 }
 
 .company-name{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   gap: 20px;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+ }
+
 .company-name h1{
    color: #1c1c1c;
    font-size: 40px;
    font-weight: bold;
-   
 
 }
 
@@ -54,30 +55,6 @@ li a {
 li a:hover{
     color: #1c1c1c;
 }
-
-.nav-bar-hamburger{
-  display: none;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .social-links{
     padding: 0;
@@ -181,19 +158,9 @@ footer{
     
 
 }
+
+
 .text-footer h3 {
   color: #fff;
   }
   
-
-
-@media screen and (max-width:1058px) {
-  .nav-bar{
-    display: none;
-  }
-  
-  .company-name h2{
-    display: none;
-  }
-  
-}
