@@ -133,12 +133,11 @@ body{
   .top-footer{
     background-color: rgb(240, 240, 240);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center ;
     align-items: center;
     min-width: 100%;
-    flex-direction: column;
   }
   
   .column1, .column2{
