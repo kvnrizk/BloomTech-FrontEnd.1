@@ -219,5 +219,109 @@ body{
     }
     
   }
+
+  a.co1{
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    margin: 2px 1 px;
+    border-radius: 2rem;
+    top: 420px;
+    left: 559px;
+    z-index: 5;	
+  }
+  
+  a.co1:hover{
+    color: skyblue;
+  }
+  
+  
+  a.co2{
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    margin: 2px 1 px;
+    border-radius: 2rem;
+    top: 420px;
+    left: 563px;
+    z-index: 5;	
+  }
+  
+  a.co2:hover{
+    color: skyblue;
+  }
+  
+  
+  
+  
+  div#LOGOS img.logo1{
+    position: relative;
+    top: 700px;
+    height: 300px;
+    width: 350px;
+    padding-left: 100px;
+    z-index: -1;
+  }
+  
+  div#LOGOS img.logo2{
+    position: relative;
+    top: 700px;
+    height: 300px;
+    width: 350px;
+    padding-left: 100px;
+    z-index: -1;
+  }
+  
+  div#LOGOS img.logo3{
+    position: relative;
+    top: 678px;
+    height: 300px;
+    width: 350px;
+    padding-left: 100px;
+    z-index: -1;
+  }
+  
+  
+  
+  embed{
+    top: 775px;
+    position: relative;
+    padding-left: 60px;
+    height: 600px;
+    width: 900px;
+  }
+  
+  
+  div.images{
+    display: flex;	
+    animation-duration: 10s;
+    animation-name: mesImages;
+    top: 900px;
+    animation-iteration-count: infinite;
+  }
+  
+  
+  
+  #slide{
+    width: 400px;
+    height: 285px;
+    top: 773px;
+    overflow: auto;
+    border: 5px solid black;
+    position: relative;
+    left: 975px;
+    justify-content: center;
+    align-items: center;
+  }
   
   
