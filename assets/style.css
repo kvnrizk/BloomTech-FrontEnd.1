@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -5,6 +9,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     min-height: 100vh;
     position: relative;
+    
   
   }
   
@@ -156,7 +161,6 @@ body{
   
   footer{
     position:relative;
-    padding-top: 100%;
     font-weight: bold;
     width: 100%;
   }
@@ -176,7 +180,173 @@ body{
   
   
   
-  @media only screen and (max-width: 1058px){
+ 
+.contenu{
+  position: relative;
+  
+}
+
+
+img.fond{
+  z-index: -1;
+  object-fit: cover;
+  width: 100%; 
+
+}
+
+  
+    .gif-buttons>a{
+
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid black ;
+      background: black;
+      padding: 12px 24px;
+      border-radius: 2px;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 10px;
+
+    }
+
+    
+
+.gif-buttons>a:hover{
+  color: skyblue;
+}
+
+
+
+
+  .gif-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    top: 75%; 
+  }
+
+  
+  .comapny-discription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+  }
+  
+  .company-description img{
+    height: auto;
+    width:  auto;
+    max-width: 100px;
+  
+  }
+
+
+.company-description{
+  max-width: 1024px;
+  padding: 0 100px ;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.product{
+  max-width: 100%;
+  padding: 0 50px ;
+  margin-left: auto;
+  margin-right: auto;
+}   
+
+.company-box{
+  
+  width: 33.33%;
+  border: 1px solid skyblue ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  padding: 30px 0;
+  
+
+}
+
+.company-box h2{
+  color: skyblue;
+  letter-spacing: 2px;
+
+}
+
+.company-box p{
+  text-align: center;
+  color: #6A859C;
+}
+
+.white-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+ .company-description-title{
+  margin-top: 20px;
+
+ }
+.section{
+  margin-top: 100px;
+}
+
+.company-description-title{
+  color: #1c1c1c;
+}
+
+.product-name h1{
+  color: #1c1c1c;
+  text-align: center;
+}
+.fast-brief{
+  width: 50%;
+  margin-left: 20px;
+}
+
+.product{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.product-description{
+  width: 50%;
+}
+
+.product-button{
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black ;
+  background: black;
+  padding: 12px 24px;
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.product-description p{
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+   @media only screen and (max-width: 1204px){
     .mobile-header{
         display: flex;
     }
@@ -189,6 +359,7 @@ body{
         top: 90px;
         right: 0px;
         background-color: white;
+        z-index: 2;
     }
     .isactive{
         display: block !important;
@@ -217,119 +388,17 @@ body{
     
   }
 
-
-
-
-  div#contenu img.fond{
-    position: absolute;
-    width: 100%;
-    height: 624px;
-    top: 129px; 
+  @media only screen and (max-width: 768px) {
+    .white-box{
+      flex-direction: column;
+    }
+    .company-box{
+      width: 100%;
+    }
+    .company-description{
+      padding: 0 50px;
+    }
+    .company-box img{
+      max-width: 50px;
+    }
   }
-
-  a.co1{
-    text-decoration: none;
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: absolute;
-    font-size: 16px;
-    margin: 2px 1 px;
-    border-radius: 2rem;
-    top: 425px;
-    left: 500px;
-    z-index: 5;	
-  }
-  
-  a.co1:hover{
-    color: skyblue;
-  }
-  
-  
-  a.co2{
-    text-decoration: none;
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: absolute;
-    font-size: 16px;
-    margin: 2px 1 px;
-    border-radius: 2rem;
-    top: 425px;
-    left: 650px;
-    z-index: 5;	
-  }
-  
-  a.co2:hover{
-    color: skyblue;
-  }
-  
-  
-  
-  
-  div#LOGOS img.logo1{
-    position: relative;
-    top: 700px;
-    height: 300px;
-    width: 350px;
-    padding-left: 0px;
-    z-index: -1;
-  }
-  
-  div#LOGOS img.logo2{
-    position: relative;
-    top: 700px;
-    height: 300px;
-    width: 350px;
-    padding-left: 100px;
-    z-index: -1;
-  }
-  
-  div#LOGOS img.logo3{
-    position: relative;
-    top: 700px;
-    height: 300px;
-    width: 350px;
-    padding-left: 100px;
-    z-index: -1;
-  }
-  
-  
-  
-  embed{
-    top: 775px;
-    position: relative;
-    padding-left: 25px;
-    height: 500px;
-    width: 800px;
-  }
-  
-  
-  div.images{
-    display: flex;	
-    animation-duration: 10s;
-    animation-name: mesImages;
-    top: 1000px;
-    animation-iteration-count: infinite;
-    padding-left: 10px;
-  }
-  
-  
-  
-  #slide{
-    width: 400px;
-    height: 285px;
-    top: 900px;
-    overflow: auto;
-    border: 2px solid black;
-    position: relative;
-    left: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
