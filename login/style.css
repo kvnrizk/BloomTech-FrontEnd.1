@@ -55,7 +55,7 @@ body
 {
 	position: relative;
 	width: 380px;
-	height: 700px;
+	height: 750px;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
@@ -68,7 +68,7 @@ body
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 700px;
+	height: 750px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
 	animation: animate 6s linear infinite;
@@ -81,7 +81,7 @@ body
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 700px;
+	height: 750px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
 	animation: animate 6s linear infinite;
