@@ -17,7 +17,7 @@
         </div> 
         <nav class="nav-bar">
             <ul class="nav-list">
-                <li class="nav-item"><a class="firstButton" href="index.php">Accueil</a></li>
+                <li class="nav-item"><a href="index.php">Accueil</a></li>
                 <li class="nav-item"><a href="location.php">Où nous trouver ?</a></li>
                 <li class="nav-item"><a href="faq.php">FAQ</a></li>
                 <li class="nav-item"><a href="nous-contacter.php">Nous contacter</a></li>
@@ -32,7 +32,7 @@
     </div>
     <nav class="nav-bar">
         <div id="mobile-links">
-            <a class="firstButton" href="index.php">Accueil</a>
+            <a href="index.php">Accueil</a>
             <a href="location.php">Où nous trouver ?</a>
             <a href="faq.php">FAQ</a>
             <a href="nous-contacter.php">Nous contacter</a>
