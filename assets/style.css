@@ -581,13 +581,17 @@ hr{
 margin: 1.4rem 0;
 }
 
-.div-row .harik-style{
+.harik-style{
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px 24px;
   background-color: #009eee;
   border-radius: 2px;
   color: #fff;
+}
+
+.harik-style:hover{
+background-color: #006293;
 }
 
 .glasses-name{
@@ -626,6 +630,11 @@ padding: 16px;
 margin: 10px;
 border: 1px solid rgba(0,0,0,.125);
 border-radius: 5px;
+background-color: #f2f2f2;
+}
+
+.div-row a:last-child{
+  margin-left: 10px;
 }
 
 /*nous contacter*/
@@ -634,12 +643,7 @@ border-radius: 5px;
   font-size: 40px;
 }
 
-#username, #mail, #message, #submit {
-  margin-bottom: 15px;
-  padding: 15px 15px;
-  font-size: 14px;
-  border: 1px solid skyblue;
-  border-radius: 4px;
+.form>form{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -647,11 +651,24 @@ border-radius: 5px;
   width: 100%;
 }
 
+#username, #mail, #message, #submit {
+  margin-bottom: 15px;
+  padding: 15px 15px;
+  font-size: 14px;
+  border: 1px solid skyblue;
+  border-radius: 4px;
+  width: 90%;
+}
+
 #submit{
   background-color: skyblue;
   color: white;
   font-size: 20px;
   font-weight: bold;
+}
+
+#submit:hover{
+  background-color: #0077b5;
 }
 
 .container-contact{
@@ -672,6 +689,56 @@ border-radius: 5px;
 .form{
   width: 50%;
 }
+
+/*nous contacter*/ 
+
+/*location*/ 
+.map{
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.list-of-addresses{
+  
+  list-style: none;
+  padding:20px;
+  width: 50%;
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+
+.box-info{
+  width: 50%;
+  text-align: center;
+  padding: 0 30px;
+
+}
+
+.boxes{
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: 0 auto;
+  
+}
+
+.information span{
+  line-height: 2;
+  
+  
+}
+
+.btn-info{
+  padding-top: 20px;
+}
+
+.box-info .title{
+  color: #1c1c1c;
+}
+/*location*/
+
 
    @media only screen and (max-width: 1204px){
     .mobile-header{

@@ -1,19 +1,19 @@
 body{
-  background-image: url("assets/images/background.png");
+  background-image: url("../assets/images/background1.png");
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 0%;
   background-repeat: repeat-x;
-  
   background-blend-mode: lighten;
 }
   
 h1 {
   position: absolute;
-  left : 35%;
+  left : 20%;
   top : 50%;
   font-size: 50px;
   font-family: "Titilium",'Courier New', Courier, monospace;
+  text-align: center;
 
 }
 

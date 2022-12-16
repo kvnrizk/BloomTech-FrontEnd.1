@@ -8,7 +8,7 @@
     <title> CGU</title>
 </head>
 <body>
-
+  <div class="cgu">
   <h1> Condition Général d'Utilisation</h1>
 
   <div class="rect-enf">
@@ -58,6 +58,6 @@ En utilisant une Application, Vous autorisez Withings, ou tout tiers désigné p
     <button class="retour-bottom">
       <a href="index.php"> <img src="assets/images/symbole-fleche-droite-noir.png" alt="flèche" height="80"/> </a>
     </button>
-
+  </div>
 </body>
 </html>

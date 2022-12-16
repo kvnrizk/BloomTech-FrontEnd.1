@@ -23,10 +23,10 @@
     </div>
     
     <div class="form">
-        <form action="#">
+        <form action="#" >
             <input type="text" id="username" name="username" placeholder="Enter you name ...">
             <input type="email" id="mail" name="mail" placeholder="Enter you email ...">
-            <textarea id="message" name="message" rows="4" cols="50" placeholder="Message"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
             <input type="submit" id="submit" value="Submit">
         </form>
     </div>

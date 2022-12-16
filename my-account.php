@@ -1,5 +1,12 @@
 <?php
     include 'includes/header.inc.php';
+    include 'includes/connexion.inc.php';
+    $conn=OpenCon();
+    $query1='SELECT * FROM users WHERE email="'.$_SESSION['email'].'"';
+    $result1=mysqli_query($conn, $query1);
+    $data=mysqli_fetch_assoc($result1);
+    
+    
 ?>
 
 <main>
@@ -13,21 +20,21 @@
                                 <img src="assets/images/avatar7.png" alt="user" width="110">
 
                                 <div class="username">
-                                    <h4>Kevin Rizk</h4>
+                                    <h4><?php echo $data['firstName'].' '.$data['lastName']; ?></h4>
                                 </div>
                             </div>
                             <ul class="social-media">
                                 <li class="social-media-line"> 
                                     <h5><img src="assets/images/facebook.png" alt="fb">&nbsp;Facebook</h5>
-                                    <span>@kevin</span>
+                                    <span>###</span>
                                 </li>
                                 <li class="social-media-line">
                                     <h5><img src="assets/images/instagram.png" alt="insta">&nbsp;Instagram</h5>
-                                    <span>kvnrizk</span>
+                                    <span>@###</span>
                                 </li>
                                 <li class="social-media-line">
                                     <h5><img src="assets/images/twitter.png" alt="tweet">&nbsp;Twitter</h5>
-                                    <span>@kevin</span>
+                                    <span>@###</span>
                                 </li>
                             </ul>
                         </div>
@@ -40,26 +47,33 @@
                             <div class="card-rows">
                                 <div class="div-row">
                                     <h4 class="row-h4">Full Name</h4>
-                                    <span class="row-span">Kevin Rizk</span>
+                                    <span class="row-span"><?php echo $data['firstName'].' '.$data['lastName']; ?></span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
                                     <h4 class="row-h4">Email</h4>
-                                    <span class="row-span">kevin.rizk14@gmail.com</span>
+                                    <span class="row-span"><?php echo $data['email']; ?></span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
-                                    <h4 class="row-h4">Phone</h4>
-                                    <span class="row-span">0769300950</span>
+                                    <h4 class="row-h4">Date Of Birth</h4>
+                                    <span class="row-span"><?php echo $data['dateOfBirth']; ?></span>
+                                </div>
+                                <hr>
+                                <div class="div-row">
+                                    <h4 class="row-h4">Phone Number</h4>
+                                    <span class="row-span">##</span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
                                     <h4 class="row-h4">Address</h4>
-                                    <span class="row-span">251 Quai De Stalingrad</span>
+                                    <span class="row-span">##</span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
                                     <a class="harik-style" href="#">Edit</a>
+                                    <a class="harik-style" href="log-out.php">LogOut</a>
+                                    
                                 </div>
                             </div>
 
