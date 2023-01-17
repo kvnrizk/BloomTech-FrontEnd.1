@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style-cgu.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> CGU</title>
@@ -14,7 +14,7 @@
   <h1> Condition Général d'Utilisation</h1>
 
   <div class="rect">
-    <h2> Limite d'âge</h2>
+    <h2> LIMITE D'ÂGE</h2>
     <h3> Si vous n'avez pas atteint la limite d'âge pour gérer votre propre compte Infinite Measure, vous devez avoir l'autorisation d'un parent ou d'un représentant légal pour utiliser un compte Infite Measure. Veuillez demander à un parent ou à un représentant légal de lire les présentes conditions avec vous.
 
       Si vous êtes un parent ou un représentant légal, et si vous autorisez votre enfant à utiliser les services, les présentes conditions s'appliquent à vous, et vous êtes responsable des activités de votre enfant sur ces services. </h3>
@@ -30,9 +30,8 @@ En utilisant une Application, Vous autorisez Withings, ou tout tiers désigné p
   </div>
 
   <div class="rect">
-    <h2> Données Localisation et Santé </h2>
+    <h2> DONNÉES LOCALISATION ET SANTÉ </h2>
     <h3> Votre localisation nous permet d'identifier les opticiens à proximité de chez vous. Elle ne sera nullement utilité à des fins commerciaux. Nous garantisons une transparance au niveau de vos données prise par les capteurs, elle ne sera donnée à aucun organisme médical, 
-      
       si tout de même vous voulez les partager à un tiers, vous pouvez faire la demande au support.
 
       Vos données seront stocker chez nos serveurs pour un meilleur suivi client. Lorsque vous résillier votre abonnement chez INFINITE MEASURES vos données seront effacer sous 3 mois. 
@@ -59,7 +58,7 @@ En utilisant une Application, Vous autorisez Withings, ou tout tiers désigné p
 
 
     <button class="retour-bottom">
-      <a href="index.php"> <img src="symbole-fleche-droite-noir.png" alt="flèche" height="80"/> </a>
+      <a href="sign-in.php"> <img src="symbole-fleche-droite-noir.png" alt="flèche" height="80"/> </a>
     </button>
   </div>
 
