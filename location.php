@@ -6,7 +6,7 @@
 <div class="container">
     <div class="main-body">
         <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.95410669975!2d2.2769954788823137!3d48.85883363944839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sen!2sfr!4v1669641635405!5m2!1sen!2sfr" width="100%" height="600" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d21010.864754150924!2d2.286458883967084!3d48.832307874222586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sopticien!5e0!3m2!1sen!2sfr!4v1674221389211!5m2!1sen!2sfr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="optician-addresses">
         <div class="boxes">
