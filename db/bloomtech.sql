@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 10 jan. 2023 à 16:02
+-- Généré le : ven. 20 jan. 2023 à 11:25
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 7.4.33
 
@@ -36,10 +36,10 @@ CREATE TABLE `faq` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `glasses data`
+-- Structure de la table `glassesdata`
 --
 
-CREATE TABLE `glasses data` (
+CREATE TABLE `glassesdata` (
   `iddata` int(11) NOT NULL,
   `idglasses` varchar(11) NOT NULL,
   `date` date NOT NULL,
@@ -49,15 +49,12 @@ CREATE TABLE `glasses data` (
   `noise` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Structure de la table `glasses identifier`
+-- Déchargement des données de la table `glassesdata`
 --
 
-CREATE TABLE `glasses identifier` (
-  `idglasses` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `glassesdata` (`iddata`, `idglasses`, `date`, `screentime`, `CO2`, `heartbeat`, `noise`) VALUES
+(1, 'test', '2023-01-20', 7, 5, 10, 23);
 
 -- --------------------------------------------------------
 
@@ -90,6 +87,7 @@ CREATE TABLE `users` (
   `phone` varchar(32) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT 0,
   `password` varchar(100) NOT NULL,
   `idglasses` varchar(11) DEFAULT NULL,
   `Facebook` varchar(100) DEFAULT NULL,
@@ -101,10 +99,10 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `dateOfBirth`, `phone`, `address`, `email`, `password`, `idglasses`, `Facebook`, `Instagram`, `Twitter`) VALUES
-(3, 'Kevin', 'Rizk', '2000-12-29', NULL, NULL, 'kevin.rizk14@gmail.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL),
-(4, 'george ', 'george ', '1999-12-12', NULL, NULL, '13@gmail.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL),
-(5, 'test', 'test', '2023-01-01', NULL, NULL, 'test@test.com', '098f6bcd4621d373cade4e832627b4f6', NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `dateOfBirth`, `phone`, `address`, `email`, `admin`, `password`, `idglasses`, `Facebook`, `Instagram`, `Twitter`) VALUES
+(3, 'Kevin', 'Rizk', '2000-12-29', NULL, NULL, 'kevin.rizk14@gmail.com', 0, '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL),
+(4, 'george ', 'george ', '1999-12-12', NULL, NULL, '13@gmail.com', 0, '202cb962ac59075b964b07152d234b70', NULL, NULL, NULL, NULL),
+(5, 'test', 'test', '2023-01-01', NULL, NULL, 'test@test.com', 0, '098f6bcd4621d373cade4e832627b4f6', 'test', NULL, NULL, NULL);
 
 --
 -- Index pour les tables déchargées
@@ -117,17 +115,11 @@ ALTER TABLE `faq`
   ADD PRIMARY KEY (`idquestion`);
 
 --
--- Index pour la table `glasses data`
+-- Index pour la table `glassesdata`
 --
-ALTER TABLE `glasses data`
+ALTER TABLE `glassesdata`
   ADD PRIMARY KEY (`iddata`),
-  ADD KEY `idglasses` (`idglasses`);
-
---
--- Index pour la table `glasses identifier`
---
-ALTER TABLE `glasses identifier`
-  ADD PRIMARY KEY (`idglasses`);
+  ADD KEY `glassesdata_ibfk_1` (`idglasses`);
 
 --
 -- Index pour la table `opticians`
@@ -155,10 +147,10 @@ ALTER TABLE `faq`
   MODIFY `idquestion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `glasses data`
+-- AUTO_INCREMENT pour la table `glassesdata`
 --
-ALTER TABLE `glasses data`
-  MODIFY `iddata` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `glassesdata`
+  MODIFY `iddata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `opticians`
@@ -177,16 +169,10 @@ ALTER TABLE `users`
 --
 
 --
--- Contraintes pour la table `glasses data`
+-- Contraintes pour la table `glassesdata`
 --
-ALTER TABLE `glasses data`
-  ADD CONSTRAINT `glasses data_ibfk_1` FOREIGN KEY (`idglasses`) REFERENCES `glasses identifier` (`idglasses`) ON UPDATE NO ACTION;
-
---
--- Contraintes pour la table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`idglasses`) REFERENCES `glasses identifier` (`idglasses`) ON DELETE SET NULL ON UPDATE NO ACTION;
+ALTER TABLE `glassesdata`
+  ADD CONSTRAINT `glassesdata_ibfk_1` FOREIGN KEY (`idglasses`) REFERENCES `users` (`idglasses`) ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
