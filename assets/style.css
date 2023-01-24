@@ -240,7 +240,7 @@ img.fond{
   }
 
   
-  .comapny-discription{
+  .company-description{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,6 +285,7 @@ img.fond{
 
 .company-box h2{
   color: skyblue;
+  text-align: center;
   letter-spacing: 2px;
 
 }
