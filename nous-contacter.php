@@ -11,23 +11,20 @@
 
 <div class="container-contact">
     <div class="title">
-        <h1>CONTACT US TODAY</h1>
-    </div>
-    <div class="sub-title">
-        <p>Feel free to contact us regarding any information</p>
+        <h1>NOUS CONTACTER</h1>
     </div>
 
-    <div class="text">
-        <p align="center">Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et
-        justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+    <div class="sub-title">
+        <p align="center">Si vous souhaitez avoir plus d'informations que celles déjà présentes sur notre site, n'hésitez pas à nous contacter via le formulaire ci-dessous :</p>
     </div>
+</br>
     
     <div class="form">
         <form action="#" >
-            <input type="text" id="username" name="username" placeholder="Enter you name ...">
-            <input type="email" id="mail" name="mail" placeholder="Enter you email ...">
+            <input type="text" id="username" name="username" placeholder="Entrez votre nom ...">
+            <input type="email" id="mail" name="mail" placeholder="Entrez votre email ...">
             <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
-            <input type="submit" id="submit" value="Submit">
+            <input type="submit" id="submit" value="Soumettre">
         </form>
     </div>
 </div>
