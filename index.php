@@ -5,10 +5,17 @@
     if (session_id() == ''){
         session_start();} 
         if ( ! isset($_SESSION["email"]) || empty($_SESSION["email"]) ){ ;
+    
 ?>
 
 <main>
-    
+<?php
+    if(isset($_GET['accepte-cookie'])){
+        setcookie('accepte-cookie','true', time() + 365243600);  //expirat° 1 an
+        header('Location: index.php');
+
+    } 
+?>
 
     <div class="contenu">
     <div class="connexion">
@@ -454,7 +461,19 @@ else {
 
 
 
+<?php 
+    if(!isset($_COOKIE['accepte-cookie'])){
+?>
+    <div class="cookies-card">
+        <p class="title">Consentement aux cookies</p>
+        <p class="info">BloomTech vous demande d'accepter les cookies afin d'optimiser les performances, les fonctionnalités des réseaux sociaux et la pertinence de la publicité. <a href="COOKIEinfo.php">Plus d'informations</a> </p>
+            <div class="button-accepter">
+                <a href="?accepte-cookie">Accepter tout</a>
+            </div>
 
+<?php
+}
+?>
 </main>
 
 <?php
