@@ -882,6 +882,74 @@ background-color: #f2f2f2;
 .admin-nav a:hover {
   background-color: #111;
 }
+.cookies-card {
+  position: fixed;
+  bottom: 30px;
+  width: 550px;
+  transform: translate(50%, 0%);
+  background-color: #c7c7c7;
+  padding: 1.5em;
+
+}
+
+.cookies-card * {
+  color: black;
+}
+
+.title {
+  font-size: medium;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+  color: black;
+  font-weight: 700;
+}
+
+.info {
+  line-height: 22.4px;
+  letter-spacing: 0.4px;
+  margin-bottom: 32px;
+}
+
+.cta {
+  border: none;
+  outline: none;
+  padding: 12.8px 24px;
+  background-color: rgb(160, 160, 160);
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.cta:hover {
+  background-color: #5785d0;
+  }
+
+  .button-accepter a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  transition: color 0.4s;
+}
+
+.button-accepter a.settings {
+  color: black;
+  margin-left: 16px;
+  border-bottom: none;
+}
+
+
+
+.button-accepter a:hover {
+  color: black;
+  font-weight: bold;
+  transition: font-weight 0.4s;
+}
+
+.button-accepter a{
+background-color: #838383;
+border:solid 6px #838383;
+border-radius: 7px;
+}
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
