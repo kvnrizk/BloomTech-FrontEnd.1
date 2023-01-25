@@ -20,7 +20,7 @@ if (isset($_POST['reg_user'])) {
   $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
   $dateOfBirth = mysqli_real_escape_string($conn, $_POST['dateOfBirth']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
+  $password_1 = mysqli_real_escape_string($conn, $_POST['pwd']);
   $password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
 
 
@@ -87,4 +87,25 @@ if (isset($_POST['login'])) {
     }
   }
 
+
+
+  //Add glasses ID
+  $IDglasses="";
+  if (isset($_POST['idglasses'])) {
+    $email= $_SESSION['email'];
+    $IDglasses = mysqli_real_escape_string($conn, $_POST['idglasses']);
+    $idgl_check_query = "SELECT * FROM users WHERE idglasses='$IDglasses' LIMIT 1";
+    $result = mysqli_query($conn, $idgl_check_query);
+    $user = mysqli_fetch_assoc($result);
+    if ($user['idglasses'] === $IDglasses) {
+      array_push($errors, "Ces lunettes sont déjà associées à un autre profil.");
+      header('location: addglasses.php');
+    } else {
+    $query2 = "UPDATE users
+    SET idglasses='$IDglasses'
+    WHERE email='$email'";
+    mysqli_query($conn, $query2);
+    header('location: index.php');
+    }
+  }
   ?>

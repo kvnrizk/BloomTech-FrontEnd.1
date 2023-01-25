@@ -240,7 +240,7 @@ img.fond{
   }
 
   
-  .comapny-discription{
+  .company-description{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,6 +285,7 @@ img.fond{
 
 .company-box h2{
   color: skyblue;
+  text-align: center;
   letter-spacing: 2px;
 
 }
@@ -294,6 +295,33 @@ img.fond{
   color: #6A859C;
 }
 
+.question-box{
+  
+  width: 33.33%;
+  border: 2px solid skyblue ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  padding: 30px 0;
+  
+
+}
+
+.question-box h2{
+  color: rgb(37, 111, 172);
+  text-align: center;
+  letter-spacing: 2px;
+
+}
+
+.question-box p{
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #1d2a35;
+}
+
 .white-box{
   display: flex;
   align-items: center;
@@ -301,6 +329,7 @@ img.fond{
   flex-direction: row;
   gap: 30px;
 }
+
  .company-description-title{
   margin-top: 20px;
 
