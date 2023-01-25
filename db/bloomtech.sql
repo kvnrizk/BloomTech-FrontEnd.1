@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 24 jan. 2023 à 17:25
+-- Généré le : mer. 25 jan. 2023 à 22:39
 -- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 7.4.33
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,6 +32,15 @@ CREATE TABLE `faq` (
   `question` text NOT NULL,
   `answer` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `faq`
+--
+
+INSERT INTO `faq` (`idquestion`, `question`, `answer`) VALUES
+(1, 'Quelles sont les spécialités des lunettes <i>Binoclear</i> ?', 'Elles sont géniales.'),
+(3, 'Où peut-on trouver les lunettes <i>Binoclear</i> ?', 'Auprès de nos opticiens partenaires.</br>\r\nVous pouvez les retrouver sur la page : <a href=\"http://localhost/BloomTech-FrontEnd.1/location.php\">Où nous trouver ?</a>. '),
+(6, 'Comment vous contacter ?', 'En remplissant le formulaire sur la page : <a href=\"http://localhost/BloomTech-FrontEnd.1/nous-contacter.php\">Nous contacter</a>. ');
 
 -- --------------------------------------------------------
 
@@ -71,14 +80,25 @@ INSERT INTO `glassesdata` (`iddata`, `idglasses`, `datedata`, `screentime`, `CO2
 
 CREATE TABLE `opticians` (
   `idoptic` int(11) NOT NULL,
+  `opticianname` varchar(100) DEFAULT 'OPTICIEN',
   `adressoptic` varchar(100) NOT NULL,
-  `latitude` varchar(100) NOT NULL,
-  `longitude` varchar(100) NOT NULL,
+  `latitude` varchar(100) DEFAULT NULL,
+  `longitude` varchar(100) DEFAULT NULL,
   `department` int(2) DEFAULT NULL,
   `phoneoptic` varchar(32) DEFAULT NULL,
   `openinghours` varchar(100) DEFAULT NULL,
-  `stock` tinyint(1) NOT NULL
+  `stock` varchar(100) DEFAULT 'Non'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `opticians`
+--
+
+INSERT INTO `opticians` (`idoptic`, `opticianname`, `adressoptic`, `latitude`, `longitude`, `department`, `phoneoptic`, `openinghours`, `stock`) VALUES
+(1, 'OPTICIEN 1', '1 rue du boulevard 11111 Ville', 'gfd', 'bc', 11, '0111223344', '8h-19h', 'Non'),
+(2, 'OPTICIEN 2', '2 rue du boulevard 11111 Ville', 'gfd', 'bc', 11, '0111223344', '8h-19h', 'Non'),
+(3, 'OPTICIEN 3', '2 rue du boulevard 11111 Ville', 'gfd', 'bc', 11, '0111223344', '8h-19h', '1'),
+(4, 'OPTICIEN 4', '2 rue du boulevard 11111 Ville', 'gfd', 'bc', 11, '0111223344', '8h-19h', '1');
 
 -- --------------------------------------------------------
 
@@ -153,7 +173,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `idquestion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idquestion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `glassesdata`
@@ -165,13 +185,13 @@ ALTER TABLE `glassesdata`
 -- AUTO_INCREMENT pour la table `opticians`
 --
 ALTER TABLE `opticians`
-  MODIFY `idoptic` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idoptic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Contraintes pour les tables déchargées
