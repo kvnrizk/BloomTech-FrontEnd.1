@@ -20,7 +20,7 @@ if (isset($_POST['reg_user'])) {
   $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
   $dateOfBirth = mysqli_real_escape_string($conn, $_POST['dateOfBirth']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
+  $password_1 = mysqli_real_escape_string($conn, $_POST['pwd']);
   $password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
 
 

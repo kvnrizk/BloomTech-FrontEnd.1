@@ -1,38 +1,33 @@
 <?php
     include 'includes/header.inc.php';
+    include 'includes/connexion.inc.php';
 ?>
 
 
 <main>
-<div class="rect">
-<h1> Avez vous des questions ? </h1>
-    <div class="search-box">
-        <input class="search-txt" type="text" name="" placeholder="Type to search">
-        <a class="search-btn" href="#">
-            <img src="assets/images/loupe.png" alt="mon icon de recherche" height="20">
-        </a>
-   </div>
-</div>
+<h1 class="company-description-title" align="center">FOIRE AUX QUESTIONS</h1>
 
-    <div id="rectq1">
-        <img class="quest" src="assets/images/1.png" alt="q1" title="q1" />
-        <h2 class="q1">Q1</h2>
-    </div>
+<?php
+$conn=OpenCon();
+$query='SELECT * FROM faq';
+$req = mysqli_query($conn, $query);
+$data=mysqli_fetch_assoc($req);
+foreach ($req as $data){
+    $question=$data['question'];
+    $answer=$data['answer'];
+?>
+            <div class="white-box">
+                <div class="question-box">
 
-    <div id="rectq2">
-        <img class="quest" src="assets/images/2.png" alt="q2" title="q2" />
-        <h2 class="q2">Q2</h2>
-    </div>
+                <h2><?php echo "$question"?></h2>
 
-    <div id="rectq3">
-        <img class="quest" src="assets/images/3.png" alt="q3" title="Q3" />
-        <h2>Q3</h2>
-    </div>
-
-    <div id="rectq4">
-        <img class="quest" src="assets/images/4.png" alt="q4" title="q4" />
-        <h2>Q4</h2>
-    </div>
+                <p><?php echo "$answer"?></p>
+                </div>
+            </div>
+        </br>
+<?php
+}
+?>
 </main>
 
 <?php
