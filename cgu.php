@@ -8,7 +8,7 @@
     <title> CGU</title>
 </head>
 <body>
-  <img src="background.png" alt="fond" width="100%" height="500px">
+  <img src="assets/images/background1.png" alt="fond" width="100%" height="500px">
 
   <div class="cgu">
   <h1> Condition Général d'Utilisation</h1>
@@ -58,7 +58,7 @@ En utilisant une Application, Vous autorisez Withings, ou tout tiers désigné p
 
 
     <button class="retour-bottom">
-      <a href="sign-in.php"> <img src="symbole-fleche-droite-noir.png" alt="flèche" height="80"/> </a>
+      <a href="sign-in.php"> <img src="assets/images/symbole-fleche-droite-noir.png" alt="flèche" height="80"/> </a>
     </button>
   </div>
 

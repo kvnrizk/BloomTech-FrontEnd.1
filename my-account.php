@@ -62,12 +62,12 @@
                                 <hr>
                                 <div class="div-row">
                                     <h4 class="row-h4">Phone Number</h4>
-                                    <span class="row-span">##</span>
+                                    <span class="row-span"><?php echo $data['phone']; ?></span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
                                     <h4 class="row-h4">Address</h4>
-                                    <span class="row-span">##</span>
+                                    <span class="row-span"><?php echo $data['address']; ?></span>
                                 </div>
                                 <hr>
                                 <div class="div-row">
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
 
-                            <div class="card-stattistics">
+                            <!-- <div class="card-stattistics">
                                 <div class="stats-box">
                                     <div class="stats-body">
                                         <div class="row-h5">
@@ -102,7 +102,9 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
+
+                        
                         </div>
                     </div>
                 </div>
