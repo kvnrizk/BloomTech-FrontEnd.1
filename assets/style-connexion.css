@@ -56,7 +56,7 @@ body
 {
 	position: relative;
 	width: 380px;
-	height: 830px;
+	height: 1000px;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
@@ -69,10 +69,10 @@ body
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 830px;
+	height: 1000px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
-	animation: animate 6s linear infinite;
+	animation: animate 5.5s linear infinite;
 }
 .boxIn::after 
 {
@@ -82,10 +82,10 @@ body
 	top: -50%;
 	left: -50%;
 	width: 380px;
-	height: 830px;
+	height: 1000px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#A7CAE7,#A7CAE7);
-	animation: animate 6s linear infinite;
+	animation: animate 5.5s linear infinite;
 	animation-delay: -3s;
 }
 

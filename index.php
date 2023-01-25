@@ -74,25 +74,26 @@
         $weeknoise= array_slice($noise, 0, 7);
     
     ?>
-    
+ 
 <h1 class="company-description-title" align="center">MES DONNÉES</h1>
-<div style="width: 100%; display: table;">
+
+<div style="width: 99%; display: table;">
     <div style="display: table-row">
-        <div style="flex-grow: 1;width: 600px; height:350px; display: table-cell;">
+        <div style="width: 50%;height:100%;display: table-cell;">
             <canvas id="myChart"></canvas>
         </div>
-        <div style="flex-grow: 1;width: 700px;height:350px; display: table-cell;">
+        <div style="width: 50%;height:100%; display: table-cell;">
             <canvas id="myChart2"></canvas>
         </div>
     </div>
 </div>
     </br>
-<div style="width: 100%; display: table;">
+<div style="width: 99%; display: table;">
     <div style="display: table-row">
-        <div style="flex-grow: 1;width: 600px; height:350px; display: table-cell;">
+        <div style="width: 50%;height:100%; display: table-cell;">
             <canvas id="myChart3"></canvas>
         </div>
-        <div style="flex-grow: 1;width: 700px;height:350px; display: table-cell;">
+        <div style="width: 50%;height:100%; display: table-cell;">
             <canvas id="myChart4"></canvas>
         </div>
     </div>
@@ -227,9 +228,8 @@
         label: 'Moyenne',
         data: <?php echo json_encode($moyCO2) ?>,
         borderWidth: 5,
-        hoverBorderWidth: 5,
-        pointStyle: false,
-        intersect : false,
+        radius: 10, 
+        pointStyle: 'line',
         fill: true,
         borderColor: [
             'rgb(100,55,9)'
@@ -396,8 +396,9 @@ else {
 
 <div id="section1" class="section company-description">
 
-    <h1 class="company-description-title" align="center">WHAT WE DO</h1>
-
+<h1 class="company-description-title" align="center">BloomTech, c'est quoi ?</h1>
+</div>
+<div id="section1" class="section company-description">
 <div class="white-box">
     <div class="company-box">
 
@@ -405,27 +406,28 @@ else {
 
         <h2>Innovation</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <p>A vous l'efficacité et l'ergonomie avec nos technologies de réseaux sans-fil et de développement Web !</p>
     
     </div>
     <div class="company-box">
 
         <img src="assets/images/health.png" alt="2">
 
-        <h2>Health</h2>
+        <h2>Santé</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <p>Suivre vos paramètres vitaux n'aura jamais été aussi simple qu'avec l'équipement BloomTech.</p>
     
     </div>
     <div class="company-box">
 
         <img src="assets/images/durability.png" alt="3">
 
-        <h2>Durability</h2>
+        <h2>Durabilité</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+        <p>Notre équipe s'engage à fournir un matériel robuste et de qualité qui vous accompagnera durablement.</p>
     
     </div>
+</div>
 </div>
 </div>
 
@@ -442,7 +444,7 @@ else {
 
         <h1 class="product-name">BinoClear</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+        <p> La technologie dernier cri BloomTech : les BinoClear ! Un design moderne, une prise en main facile et dynamique, un regard quotidien précis sur vos constantes vitales et le tout facilement accessible depuis votre profil personnalisé. Alors n'attendez plus et optez pour le futur !  </p>
 
         
 
