@@ -17,13 +17,13 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-main">
-                                <img src="assets/images/avatar7.png" alt="user" width="110">
+                                <img src="assets/images/user2.png" alt="user" width="110">
 
                                 <div class="username">
                                     <h4><?php echo $data['firstName'].' '.$data['lastName']; ?></h4>
                                 </div>
                             </div>
-                            <ul class="social-media">
+                            <!-- <ul class="social-media">
                                 <li class="social-media-line"> 
                                     <h5><img src="assets/images/facebook.png" alt="fb">&nbsp;Facebook</h5>
                                     <span>###</span>
@@ -36,7 +36,7 @@
                                     <h5><img src="assets/images/twitter.png" alt="tweet">&nbsp;Twitter</h5>
                                     <span>@###</span>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
                                 </div>
                                 <hr>
                                 <div class="div-row">
-                                    <a class="harik-style" href="#">Edit</a>
+                                    <a class="harik-style" href="edit-myaccount.php?id=<?php echo $data['id'];?>">Edit</a>
                                     <a class="harik-style" href="log-out.php">LogOut</a>
                                     
                                 </div>

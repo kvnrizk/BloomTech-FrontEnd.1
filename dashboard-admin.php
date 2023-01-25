@@ -1,10 +1,18 @@
 <?php
 include 'includes/connexion.inc.php';
 $conn = OpenCon();
+ 
 
+
+    
 $query = "SELECT * FROM users";
 $result = mysqli_query($conn, $query);
 
+$query2 = "SELECT * FROM faq";
+$result2 = mysqli_query($conn, $query2);
+
+$query3 = "SELECT * FROM opticians";
+$result3 = mysqli_query($conn, $query3);
 
 ?>
 
@@ -20,7 +28,7 @@ $result = mysqli_query($conn, $query);
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Table with Add and Delete Row Feature</title>
+<title>Admin Page</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -51,7 +59,7 @@ $result = mysqli_query($conn, $query);
     }
     .table-title .add-new {
         float: right;
-		height: 30px;
+		height: 40px;
 		font-weight: bold;
 		font-size: 12px;
 		text-shadow: none;
@@ -68,6 +76,7 @@ $result = mysqli_query($conn, $query);
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
         width: fit-content;
+        word-break: break-all;
     }
    
     table.table th i {
@@ -114,83 +123,45 @@ $result = mysqli_query($conn, $query);
 	table.table td .add {
 		display: none;
 	}
+
+    .search{
+        background-color: aliceblue;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        
+    }
+
+::placeholder {
+    text-align: center;
+    }
+
 </style>
-<!-- <script>
-$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();
-	var actions = $("table td:last-child").html();
-	// Append table with add row form on add new button click
-    $(".add-new").click(function(){
-		$(this).attr("disabled", "disabled");
-		var index = $("table tbody tr:last-child").index();
-        var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
-			'<td>' + actions + '</td>' +
-        '</tr>';
-    	$("table").append(row);		
-		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-	// Add row on add button click
-	$(document).on("click", ".add", function(){
-		var empty = false;
-		var input = $(this).parents("tr").find('input[type="text"]');
-        input.each(function(){
-			if(!$(this).val()){
-				$(this).addClass("error");
-				empty = true;
-			} else{
-                $(this).removeClass("error");
-            }
-		});
-		$(this).parents("tr").find(".error").first().focus();
-		if(!empty){
-			input.each(function(){
-				$(this).parent("td").html($(this).val());
-			});			
-			$(this).parents("tr").find(".add, .edit").toggle();
-			$(".add-new").removeAttr("disabled");
-		}		
-    });
-	// Edit row on edit button click
-	$(document).on("click", ".edit", function(){		
-        $(this).parents("tr").find("td:not(:last-child)").each(function(){
-			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-		});		
-		$(this).parents("tr").find(".add, .edit").toggle();
-		$(".add-new").attr("disabled", "disabled");
-    });
-	// Delete row on delete button click
-	$(document).on("click", ".delete", function(){
-        $(this).parents("tr").remove();
-		$(".add-new").removeAttr("disabled");
-    });
-});
-</script> -->
+
 </head>
 <body>
 
 <nav class='admin-nav'>
   <ul>
-    <li><a href="#">Users</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Addresses</a></li>  
+    <li data-target='section.users.s-h'><a href="#users">Users</a></li>
+    <li data-target='section.faq.s-h'><a href="#faq">FAQ</a></li>
+    <li data-target='section.addresses.s-h'><a href="#addresses">Addresses</a></li>
+    <li><a href="admin-logout.php">Log Out</a></li>  
   </ul>
 </nav>
-
+<section class='users s-h'>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-8"><h2>User <b>Details</b></h2></div>
                     <div class="col-sm-4">
+                        <input class="search" type="text" id='myInput' name="" placeholder="Type to search" >
                         <a href='controller/add.php'><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button></a>
                     </div>
                 </div>
             </div>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id='myTable'>
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -206,25 +177,142 @@ $(document).ready(function(){
                     <?php 
                     while($allusers = mysqli_fetch_assoc($result)){ ?>
 
-                    <tr>
-                        <td><?php echo $allusers['firstName'] ?></td>
-                        <td><?php echo $allusers['lastName'] ?></td>
-                        <td><?php echo $allusers['dateOfBirth'] ?></td>
-                        <td><?php echo $allusers['phone'] ?></td>
-                        <td><?php echo $allusers['address'] ?></td>
-                        <td><?php echo $allusers['email'] ?></td>
+                    <tr class='table-row'>
+                        <td class='fil'><?php echo $allusers['firstName'] ?></td>
+                        <td class='fil'><?php echo $allusers['lastName'] ?></td>
+                        <td class='fil'><?php echo $allusers['dateOfBirth'] ?></td>
+                        <td class='fil'><?php echo $allusers['phone'] ?></td>
+                        <td class='fil'><?php echo $allusers['address'] ?></td>
+                        <td class='fil'><?php echo $allusers['email'] ?></td>
                         <td>
 							
                             <a href='controller/edit.php?id=<?php echo $allusers['id'];?>' class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href='controller/delete.php?id=<?php echo $allusers['id'];?>' class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
+                    
                     <?php } ?>
                 </tbody>
             </table>
+                    </section>
+
+
+
+    <section class='faq s-h'>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>FAQ <b>Details</b></h2></div>
+                    <div class="col-sm-4">
+                        <input class="search" type="text" id='myInput' name="" placeholder="Type to search" >
+                        <a href='controller/add-faq.php'><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button></a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered" id='myTable'>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer </th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    while($allusers = mysqli_fetch_assoc($result2)){ ?>
+
+                    <tr class='table-row'>
+                        <td class='fil'><?php echo $allusers['questions'] ?></td>
+                        <td class='fil'><?php echo $allusers['answers'] ?></td>
+                        <td>
+							
+                            <a href='controller/edit-faq.php?id=<?php echo $allusers['id'];?>' class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href='controller/delete-faq.php?id=<?php echo $allusers['id'];?>' class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
                     
+                    <?php } ?>
+                </tbody>
+            </table>
+                    </section>
+
+<section class='addresses s-h'>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>Address <b>Details</b></h2></div>
+                    <div class="col-sm-4">
+                        <input class="search" type="text" id='myInput' name="" placeholder="Type to search" >
+                        <a href='controller/add-address.php'><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button></a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered" id='myTable'>
+                <thead>
+                    <tr>
+                        <th>Optic Address</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Opening Hours</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    while($allusers = mysqli_fetch_assoc($result3)){ ?>
+
+                    <tr class='table-row'>
+                        <td class='fil'><?php echo $allusers['adressoptic'] ?></td>
+                        <td class='fil'><?php echo $allusers['department'] ?></td>
+                        <td class='fil'><?php echo $allusers['phoneoptic'] ?></td>
+                        <td class='fil'><?php echo $allusers['openinghours'] ?></td>
+                        <td class='fil'><?php echo $allusers['stock'] ?></td>
+                        <td>
+							
+                            <a href='controller/edit-address.php?id=<?php echo $allusers['idoptic'];?>' class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href='controller/delete-address.php?id=<?php echo $allusers['idoptic'];?>' class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    
+                    <?php } ?>
+                </tbody>
+            </table>
+        </section>
+
+            <script type="text/javascript">
+
+                    $(document).ready(function(){
+                //add index column with all content.
+                    $(".table-bordered tr:has(td)").each(function(){
+        var t = $(this).text().toLowerCase(); //all row text
+        $("<td class='indexColumn'></td>")
+            .hide().text(t).appendTo(this);
+    });//each tr
+    $(".search").keyup(function(){
+    var s = $(this).val().toLowerCase().split(" ");
+        //show all rows.
+        $(".table-bordered tr:hidden").show();
+        $.each(s, function(){
+            $(".table-bordered tr:visible .indexColumn:not(:contains('"
+                + this + "'))").parent().hide();
+              })
+        })
+        })
+
+        </script>
+
+        <script>
+            $("nav ul li").click(function(){
+            $("section.s-h").css("display", "none");
+            $($(this).data("target")).css("display", "block");
+            });
+        </script>
     </div>
         </div>  
     
 </body>
+
 </html>
