@@ -19,9 +19,9 @@ foreach ($req as $data){
             <div class="white-box">
                 <div class="question-box">
 
-                <h2><?php echo "$question"?></h2>
+                <h2><?php echo "$questions"?></h2>
 
-                <p><?php echo "$answer"?></p>
+                <p><?php echo "$answers"?></p>
                 </div>
             </div>
         </br>
