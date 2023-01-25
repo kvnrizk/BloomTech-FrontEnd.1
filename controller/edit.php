@@ -29,9 +29,10 @@ $dateOfBirth = $_REQUEST["dateOfBirth"];
 $phone = $_REQUEST["phone"];
 $address = $_REQUEST["address"];
 $email = $_REQUEST["email"];
+$password = $_REQUEST["password"];
 $update="UPDATE users SET firstName='".$firstName."',
 lastName='".$lastName."', dateOfBirth='".$dateOfBirth."',
-phone='".$phone."' ,address='".$address."',email='".$email."' WHERE id='".$id."'";
+phone='".$phone."' ,address='".$address."',email='".$email."',password='".$password."' WHERE id='".$id."'";
 mysqli_query($con, $update) or die(mysqli_error());
 $status = "Record Updated Successfully. </br></br>
 <a href='../dashboard-admin.php'>View Updated Record</a>";
@@ -54,6 +55,8 @@ value="<?php echo $row['phone'];?>" /></p>
 value="<?php echo $row['address'];?>" /></p>
 <p><input type="email" name="email" placeholder="Enter Email" 
 required value="<?php echo $row['email'];?>" /></p>
+<p><input type="password" name="password" placeholder="Enter password" 
+required value="<?php echo $row['password'];?>" /></p>
 <p><input name="submit" type="submit" value="Update" /></p>
 </form>
 <?php } ?>

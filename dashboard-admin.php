@@ -170,6 +170,7 @@ $result3 = mysqli_query($conn, $query3);
                         <th>Phone</th>
                         <th>Addess</th>
                         <th>Email</th>
+                        <th>Password</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -184,6 +185,7 @@ $result3 = mysqli_query($conn, $query3);
                         <td class='fil'><?php echo $allusers['phone'] ?></td>
                         <td class='fil'><?php echo $allusers['address'] ?></td>
                         <td class='fil'><?php echo $allusers['email'] ?></td>
+                        <td class='fil'><?php echo $allusers['password'] ?></td>
                         <td>
 							
                             <a href='controller/edit.php?id=<?php echo $allusers['id'];?>' class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
