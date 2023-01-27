@@ -223,8 +223,8 @@ $result3 = mysqli_query($conn, $query3);
                     while($allusers = mysqli_fetch_assoc($result2)){ ?>
 
                     <tr class='table-row'>
-                        <td class='fil'><?php echo $allusers['questions'] ?></td>
-                        <td class='fil'><?php echo $allusers['answers'] ?></td>
+                        <td class='fil'><?php echo $allusers['question'] ?></td>
+                        <td class='fil'><?php echo $allusers['answer'] ?></td>
                         <td>
 							
                             <a href='controller/edit-faq.php?id=<?php echo $allusers['id'];?>' class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
