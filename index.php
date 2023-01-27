@@ -26,63 +26,6 @@
         <a href="log-in.php">SE CONNECTER</a>
         <a href="#section1">EN SAVOIR PLUS</a>     
     </div>
-    <div id="section1" class="section company-description">
-
-<h1 class="company-description-title" align="center">BloomTech, c'est quoi ?</h1>
-</div>
-<div id="section1" class="section company-description">
-<div class="white-box">
-    <div class="company-box">
-
-        <img src="assets/images/innovation.png" alt="1">
-
-        <h2>Innovation</h2>
-
-        <p>A vous l'efficacité et l'ergonomie avec nos technologies de réseaux sans-fil et de développement Web !</p>
-    
-    </div>
-    <div class="company-box">
-
-        <img src="assets/images/health.png" alt="2">
-
-        <h2>Santé</h2>
-
-        <p>Suivre vos paramètres vitaux n'aura jamais été aussi simple qu'avec l'équipement BloomTech.</p>
-    
-    </div>
-    <div class="company-box">
-
-        <img src="assets/images/durability.png" alt="3">
-
-        <h2>Durabilité</h2>
-
-        <p>Notre équipe s'engage à fournir un matériel robuste et de qualité qui vous accompagnera durablement.</p>
-    
-    </div>
-</div>
-</div>
-</div>
-
-<div class="section product">
-
-    <div class="fast-brief">
-        <video id="myVideo" autoplay="true" src="assets/videos/VideopromoBino.mp4" width="100%"></video> 
-    </div>
-
-
-    <div class="product-description">
-
-    
-
-        <h1 class="product-name">BinoClear</h1>
-
-        <p> La technologie dernier cri BloomTech : les BinoClear ! Un design moderne, une prise en main facile et dynamique, un regard quotidien précis sur vos constantes vitales et le tout facilement accessible depuis votre profil personnalisé. Alors n'attendez plus et optez pour le futur !  </p>
-
-        
-
-    </div>
-
-</div>
 </div>
 <?php } else {
     $conn=OpenCon();
@@ -458,7 +401,63 @@ else {
 
 <?php }} ?>
 
+<div id="section1" class="section company-description">
 
+<h1 class="company-description-title" align="center">BloomTech, c'est quoi ?</h1>
+</div>
+<div id="section1" class="section company-description">
+<div class="white-box">
+    <div class="company-box">
+
+        <img src="assets/images/innovation.png" alt="1">
+
+        <h2>Innovation</h2>
+
+        <p>A vous l'efficacité et l'ergonomie avec nos technologies de réseaux sans-fil et de développement Web !</p>
+    
+    </div>
+    <div class="company-box">
+
+        <img src="assets/images/health.png" alt="2">
+
+        <h2>Santé</h2>
+
+        <p>Suivre vos paramètres vitaux n'aura jamais été aussi simple qu'avec l'équipement BloomTech.</p>
+    
+    </div>
+    <div class="company-box">
+
+        <img src="assets/images/durability.png" alt="3">
+
+        <h2>Durabilité</h2>
+
+        <p>Notre équipe s'engage à fournir un matériel robuste et de qualité qui vous accompagnera durablement.</p>
+    
+    </div>
+</div>
+</div>
+</div>
+
+<div class="section product">
+
+    <div class="fast-brief">
+        <video id="myVideo" autoplay="true" src="assets/videos/VideopromoBino.mp4" width="100%"></video> 
+    </div>
+
+
+    <div class="product-description">
+
+    
+
+        <h1 class="product-name">BinoClear</h1>
+
+        <p> La technologie dernier cri BloomTech : les BinoClear ! Un design moderne, une prise en main facile et dynamique, un regard quotidien précis sur vos constantes vitales et le tout facilement accessible depuis votre profil personnalisé. Alors n'attendez plus et optez pour le futur !  </p>
+
+        
+
+    </div>
+
+</div>
 
 
 
